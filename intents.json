@@ -1,73 +1,477 @@
 {"intents": [
-        {"tag": "greeting",
-         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
-         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
-         "context": [""]
-        },
-        {"tag": "goodbye",
-         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
-         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
-         "context": [""]
-        },
-        {"tag": "thanks",
-         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
-         "responses": ["Happy to help!", "Any time!", "My pleasure"],
-         "context": [""]
-        },
-        {"tag": "noanswer",
-         "patterns": [],
-         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
-         "context": [""]
-        },
-        {"tag": "options",
-         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
-         "responses": ["I can guide you through Adverse drug reaction list, Blood pressure tracking, Hospitals and Pharmacies", "Offering support for Adverse drug reaction, Blood pressure, Hospitals and Pharmacies"],
-         "context": [""]
-        },
-        {"tag": "adverse_drug",
-         "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", "List all drugs suitable for patient with adverse reaction", "Which drugs dont have adverse reaction?" ],
-         "responses": ["Navigating to Adverse drug reaction module"],
-         "context": [""]
-        },
-        {"tag": "blood_pressure",
-         "patterns": ["Open blood pressure module", "Task related to blood pressure", "Blood pressure data entry", "I want to log blood pressure results", "Blood pressure data management" ],
-         "responses": ["Navigating to Blood Pressure module"],
-         "context": [""]
-        },
-        {"tag": "blood_pressure_search",
-         "patterns": ["I want to search for blood pressure result history", "Blood pressure for patient", "Load patient blood pressure result", "Show blood pressure results for patient", "Find blood pressure results by ID" ],
-         "responses": ["Please provide Patient ID", "Patient ID?"],
-         "context": ["search_blood_pressure_by_patient_id"]
-        },
-        {"tag": "search_blood_pressure_by_patient_id",
-         "patterns": [],
-         "responses": ["Loading Blood pressure result for Patient"],
-         "context": [""]
-        },
-        {"tag": "pharmacy_search",
-         "patterns": ["Find me a pharmacy", "Find pharmacy", "List of pharmacies nearby", "Locate pharmacy", "Search pharmacy" ],
-         "responses": ["Please provide pharmacy name"],
-         "context": ["search_pharmacy_by_name"]
-        },
-        {"tag": "search_pharmacy_by_name",
-         "patterns": [],
-         "responses": ["Loading pharmacy details"],
-         "context": [""]
-        },
-        {"tag": "hospital_search",
-         "patterns": ["Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
-         "responses": ["Please provide hospital name or location"],
-         "context": ["search_hospital_by_params"]
-        },
-        {"tag": "search_hospital_by_params",
-         "patterns": [],
-         "responses": ["Please provide hospital type"],
-         "context": ["search_hospital_by_type"]
-        },
-        {"tag": "search_hospital_by_type",
-         "patterns": [],
-         "responses": ["Loading hospital details"],
-         "context": [""]
-        }
-   ]
+  {"tag": "baankii moobayilaa",
+  "patterns": ["Akkamitti mossajjii baankii moobaayilaa baankii awash fayyadamuun haftee herrega koo ilaaluu danda’a?"],
+  "responses": ["Haftee herrega keessanii ilaaluuf, mossajjii baankii moobaayilaa keessa seenuudhaan gara kutaa “Haftee Herregaa” jedhutti deemuun qofti. Haftee herregaa kee ilaaluu dandeessa"]
+  },
+  {"tag": "baankii moobayilaa",
+  "patterns": ["Karaa mossajjii mobaayilaatiin herrega koo irraa gara herrega nama birootti maallaqa dabarsuu danda'aa?"],
+  "responses": ["Eeyyee, mossajjii baankii moobaayilaa fayyadamun herrega keessan irra gara herrega nama biraatti dabarsuuf mossajjii keessaa filannoo “mallaqa dabarsuu” jedhu barbaadaa odeeffanno gaafatamtanii fi bakka duwwawwan guutaa."]
+  },
+  {"tag": "baankii moobayilaa",
+  "patterns": ["Baankii moobaayilaa daldalaaf fayyadamuun nageenya qabaa?"],
+  "responses": ["Appilikeeshiniiwwan baankii moobaayilaa nageenya daldala keessanii mirkaneessuuf tarkaanfiiwwan nageenyaa kanneen akka icciitii, mirkaneessuu sababoota hedduu, fi mirkaneessuu baayoomeetirii dursa kennu. Akka waliigalaatti hojii faayinaansiidhaaf baankii moobaayilaa fayyadamuun nageenya akka qabutti fudhatama."]
+  },
+   {"tag": "baankii moobayilaa",
+  "patterns": ["Karaa mossajjii mobaayilaatiin akkaawuntii koo irratti sochii hayyama hin qabne yoo shakke maal gochuu qaba?"],
+  "responses": ["Yoo waan shakkisiisaa ykn hayyama malee seenuu argitan, hatattamaan tajaajila maamiltoota baankii qunnamaa ykn amala mossajjii fayyadamuun sochii sobaa gabaasaa. Tarkaanfiiwwan akkaawuntii keessan eeguuf isin qajeelchu."]
+  },
+   {"tag": "baankii moobayilaa",
+  "patterns": ["Gaaffii: Akkamitti mossajjii baankii moobaayilaa koo irratti daldala irratti akeekkachiisa saaguu danda’a."],
+  "responses": ["Akkaataa idileetti akeekkachiisa daldalaa kutaa qindaa’ina ykn filannoo mossajjii baankii moobaayilaa keessatti saaguu dandeessu. Gosoota daldalaa waa’ee isaa beeksisuu barbaaddu, kan akka baasii guddaa baasuu ykn kuufama filadhu"]
+  },
+  {"tag": "baankii moobayilaa",
+  "patterns": ["Mossajjii baankii moobaayilaa fayyadamuun cheekiin galchuu nan danda’aa?"],
+  "responses": ["Appilikeeshiniiwwan baankii moobaayilaa hedduun hojii kuufama cheekiin fageenya irraa kan dhiyeessan yoo ta’u, suuraa fuula duraa fi duubaa cheekiin kaasuun akkaawuntii keessanitti galchuuf karaa elektirooniksii galchuu dandeessu."]
+  },
+  {"tag": "baankii moobayilaa",
+  "patterns": ["Yoon ragaa seensaa baankii moobaayilaa koo dagadhe maaltu ta’a?","how long will be a single semester"],
+  "responses": ["Yoo ragaa seensaa keessan dagattan, filannoowwan jecha icciitii deebisuu ykn deebisuu karaa mirkaneessa iimeelii, gaaffii nageenyaa, ykn yoo dandeessifame mirkaneessuu baayoomeetirii ni kennu yookin immoo damee isin dhihootti jiru gaafaadha."]
+  },
+  {"tag": "baankii moobayilaa",
+  "patterns": ["Dabarsa maallaqaa karaa mossajjii baankii moobaayilaa irratti daangaa qabaa?"],
+  "responses": ["Eeyyee, yeroo baay’ee jijjiirraa maallaqaa wabiif jecha guyyaa guyyaan daangaa ni jira. Daangaawwan kun imaammata baankii keessanii irratti hundaa’uun garaagarummaa qabaachuu kan danda’an yoo ta’u, jijjiirraa guddaadhaaf mirkaneessa dabalataa barbaachisuu danda’u"]
+  },
+  {"tag": "baankii moobayilaa",
+  "patterns": ["waa’ee baankii mobiyilaa waanta dabalataa akkamittin beekuu dandahaa?"],
+  "responses": ["Wantoota muraasa hubatamuu qaban - Baankonni Itiyoophiyaa maamiltoota baankii biroo baankii moobaayilaa isaanii fayyadamaniif kaffaltii dabalataa itti dabaluudhaaf mirgi kennameefii jira. Biyyoota biroo keessattis baankii moobaayilaa murtaa’oon kaffaltii maamiltoota baankii hin taaneen raawwatamaniif kaffaltii kaffaluu danda’an jiru. Kaffaltiin kun akka idileetti yeroo kaffaltiia agarsiifamu."]
+  },
+  {"tag": "baankii moobayilaa",
+  "patterns": ["Yoo baankii moobilaa koo narratti cufame  maal gochuu akkan qabuu fi eenyuun akkan qunnamu beekuun barbaade."],
+  "responses": ["Yoo baankii moobilaa keessan isinirratti cufame ykn hatame, wanti isin gochuu qabdan hatattamaan Baankii Awaash 8980 bilbiltanii baankii moobilaa keessan bade gabaasuu qofa. Gidduugalli mammiltoota kun kun guyyaa hunda sa'aatii 24 ni argama.  gara baankii moobila keessaan seentanii filannoo maallaqa baasuu jedhu irratti tuqxu isaan boodammoo lakkofsa bilbilaa fi hamma qarshii baastanii galchaa jedha. isaan booda milkanneessi dijitii afur kan jalqabaa fi afur kan boodaa jedhee ergaa gababaan ergama. bakka ATM baankii awash deemaa baafadha. ykn immoo damee deemaa."]
+ },
+  {"tag":"baankii moobayilaa",
+  "patterns": ["baankii moobaayilaa irraa maallaqa baasuuf tartiiba  akkamii filachuu qaba?"],
+  "responses": ["gara baankii moobila keessaan seentanii filannoo maallaqa baasuu jedhu irratti tuqxu isaan boodammoo lakkofsa bilbilaa fi hamma qarshii baastanii galchaa jedha. isaan booda milkanneessi dijitii afur kan jalqabaa fi afur kan boodaa jedhee ergaa gababaan ergama. bakka ATM baankii awash deemaa baafadha. ykn immoo damee deemaa."]
+  },
+  {"tag": "baankii moobayilaa",
+  "patterns": ["maallaqni tokko dhimmaa bittaaf dabarsee naaf milkaa'uu isaa akkamittan beekuu dandahaa?"],
+  "responses": ["Daldalaa irraa waraqaa kaffaltii ni argattu, akkasumas erga daldalli milkaa’ee booda odeeffannoo quunnamtii galmaa’e irratti Emailer/ SMS ni argatta."]
+  },
+  {"tag":"baankii moobayilaa",
+  "patterns": ["Kaardii kennaa Baankii Awaash bitachuuf herrega Baankii Awaash account qabaachuun na barbaachisa"],
+  "responses": ["Lakki, kana bitachuuf herrega Baankii Awaash qabaachuun dirqamaan isin hin barbaachisu."]
+  },
+  {"tag": "baankii moobayilaa",
+  "patterns": ["Yeroon Kaardii kennaa Baankii Awaash bitu sanadoota akkamii galchuu qaba"],
+  "responses": ["Sanadni kamiyyuu dhiyaachuun hin barbaachisu."]
+  },
+  {"tag": "baankii moobayilaa",
+  "patterns": ["Jecha icciitii baankii mobayilaajechuun maali?"],
+  "responses": ["Jechi icciitii koodii nageenya qabuudha, kunis karaa Baankii Awaash kennaa baankii mobayilaa kaffaltii kamiyyuu mirkaneessuuf kan oolu ta’a. Ragaa seensaa Kaardii kennaa Baankii Awaash ta'a."]
+  },
+  {"tag": "baankii moobayilaa",
+  "patterns": ["Dafee Kaardii kennaa baankii moobayilaan iyyadhee argachuu danda'aa?"],
+  "responses": ["Fayyadamaan Kaardii kennaa Baankii Awaash yeroo qabatamaatti battalumatti kan geessu ta’a"]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Baankii mobayilaa  irratti kaffaltii addunyaawaa gochuu nan danda’aa?"],
+    "responses": ["Yeroo ammaa kana baankii moobilaa keessanin maammiloota tajaajila baankii mobayilaa addunyaawaa marsariitii isaanii irratti mul’atu irraa bittaa raawwachuuf itti fayyadamuu kan dandeessisu yeroo gababbatti baankii awash waliin master kaardiin neegaluuf jedha."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Yoo baankii moobilaa koo hin hojjenne maal gochuu qabaa?"],
+    "responses": ["Rakkoon teeknikaa sababa baankii moobilaa keessan hin hojjenne yoo jiraate, wiirtuu Baankii Bilbilaa ykn damee keenyaan nu qunnamuun baankii moobilaa jedhame sana gochuun isin gaafanna. Maaloo baankii moobilaa haaraa akkaawuntii keessaniif kaffaltii malee dha.Lakkoofsa 8980 irratti bilbili.Hafteen herrega keessan keessa jiru irratti hundaa’uun daangaa guyyaa qarshii 25,000 dha. Baankii moobaayilaa irratti. Daangaawwan kun nageenya baankii moobilaa keessaniif kaa’amaniiru.."]
+  },
+ {"tag": "baankii moobayilaa",
+  "patterns": ["Chip kaardii kaffaltii baankii mobayilaa  irratti raawwatamuuf fayyadamuu ni danda'amaa?"],
+  "responses": ["Eeyyee baankii moobilaa chippii kun kaffaltii baankii mobayilaa  irratti taasifamuu danda'a. Garuu galmaa'uu qaba kunis kaffaltii baankii mobayilaa nageenya qabu kan mirkaneessu yoo ta'u sana booda baankii moobilaa kana baankii mobayilaa irratti fayyadamuun ni danda'ama.."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Yoon baankii moobilaa koo sadarkaa idil-addunyaatti fayyadamuu barbaade hoo maaltu narraa eegamaa?"],
+    "responses": ["Baankii moobilaa kan fayyadamuun ni danda'ama biyya kana keessatti qofa. baankii moobilaa sadarkaa idil-addunyaatti fayyadamuu dandeenyu argachuuf damee dhiyoo jiru daawwachuun “Baankii interneetaa” baankii moobilaa gaafachuu dandeessu."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Daangaan kaffaltii baankii moobilaa meeqaa??"],
+    "responses": ["Daangaan guyyaa guyyaa qarshii 100,000 dha. Kunis hafteen herrega keessan keessa jirurratt jiruuf kan hundaa'u yoo ta'u, nageenya herrega keessaniif kan ooludha.."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Waa'ee Baankii Awaash badhaasa baankii moobilaa kaffaltiin ani beekuu qabu jiraa?"],
+    "responses": ["Faayidaan biraa baankii moobilaa Deebii Badhaasa yeroo bakka kaffaltiiatti bitattan kaffaltiin kaffaltiia ni jira."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Waa’ee dhiyeessii baankii moobilaa irratti jiru beekuuf eessatti qunnamuu ykn barreessuu dandahaa?"],
+    "responses": ["Bakka kamittuu bilbiluu ykn barreessuu hin qabdu, waa’ee tarree dhiyeessii gammachiisaa bilisaan 8980 irratti barreessu dandeessa."]
+  },
+ {"tag": "baankii moobayilaa",
+    "patterns": ["Yoon baankii moobilaa koo akka hin dalagne godhe sagantaa qabxii yeroo badhaasaa naaf lakkaa’aa?"],
+    "responses": ["Lakki, akkaawuntii yeroo qabxii badhaasaa keessan sochiirra qofaadha kan fayyadamuu dandeessu."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Akkamitti password koo deebisuu nan danda'a?"],
+    "responses": ["Jecha icciitii keessan deebisuuf ykn jijjiiruuf mossajji baankii moobayilaa keessan seenuun caancala sirreeffama tuquu qabdu. Yoo jecha icciitii akkaawuntii keessanii dagattan “Forget Password”jettanii yaaluun ergaan jecha icciitii deebisanii dhaabuu bilbila keessan irratti siniif ergama.."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Tokkoon tokkoon sochii kaffaltii biilii irratti qabxii yeroo meeqa argadhaa?"],
+    "responses": ["Lakkoofsi qabxii gocha tokkoon tokkoon isaaniif argamuu qabu daayinamikii yoo ta’u 1-4 gidduutti argama. Qabxiin argachuu qabdu yeroo akkaawuntii keessanitti seentan isinitti mul'ata.."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Qabxii yeroo koo kuufame eessatti jijjiirrachuu danda'aa?"],
+    "responses": ["Qabxii badhaasaa gara qabxiilee yeroo qillensaatti jijjirrachuu itti fayyadamuu dandeessu. Qabxiilee yeroo fayyadamuun dhiyeessii fi kennaa hawwataa ta'e argachuu ni dandeessu."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Qabxii yeroo kaffaltii kootiif argadhe eessatti ilaaluu danda'a?"],
+    "responses": ["Baankii moobayilaa seenuun ilaaluu tajaajila biroo jala seentanii qabxii badhaasaa tuquun qabxii yeroo argattan ilaaluu dandeessu.."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Yeroon biyya alaa jirutti gatii baankii moobilaa koo akkamittan top-up godha?"],
+    "responses": ["Ammaf tajaajilli kun hojirra hin oolle. Namni hayyamame sanadootaa fi maallaqa barbaachisaa ta’e qabachuun damee Baankii Awaash daawwachuu qaba. Kan hafe ni kunuunsina."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Yoo baankii moobilaa koo bade ykn hatame eenyuun qunnamuu qaba?"],
+    "responses": ["Baankii Awaash hatattamaan 8980 bilbiluun gabaasaa. Yeroo gabaasni kee baankii keessatti galmaa’e irraa eegalee) kaffaltii raawwatamuuf itti gaafatamummaa hin fudhattu.."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Ragaa seensaa baankii moobaayilaa jijjiiramuu danda'aa?"],
+    "responses": ["Lakki, ragaa seensaa baankii moobaayilaa baankii moobaayilaa irratti jijjiiramuu danda'a. Yoo ragaa seensaa dagatte ykn dhabde, gargaarsa  8980 “internet Banking” tiin ragaa seensaa haaraa gaafachuu qabda."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Akkamittan Tajaajila Gargaarsa Maamiltootaa argachuu dandaha?"],
+    "responses": ["Tajaajila Tajaajila Gargaarsa Maamiltootaa Addunyaa irratti argamu fayyadamuuf lakkoofsa wiirtuu bilbilaa 8980 bilbiluu dandeessu."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Fayyadama baankii moobilaa kanaaf kaffaltiin kaffalamu jiraa?"],
+    "responses": ["Tajaajiloonni tokko tokko kaffaltii qabu. itti fayyadama baankii moobilaa irratti kaffaltiin hin jiru. Haa ta'u malee, irra deebiin baasuuf kaffaltiin ni jira.Kaffaltiin Dabalataan herrega itti fayyadama baankii moobilaa irratti hundaa'e kamiyyuu baankii moobilaa kana irratti kan raawwatamu yoo ta'u, Baankiitiin Kan Hin Deebi'amnedha."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["baankii moobilaa Baankii Awaash “kaardii kennaa” bitadhu sanadoota akkamii galchuu qabaa?"],
+    "responses": ["Yoo abbaa Herrega Ammaa ykn Qusannaa Baankii Awaash qabdu taate unka iyyannoo baankii moobilaa “kaardii kennaa” galchuu qofa si barbaachisa. Yoo abbaa Herrega Ammaa ykn Qusannaa Baankii Awaash amma jiru hin taane ta’e unka iyyannoo baankii moobilaa “kaardii kennaa” ragaa eenyummaa fi ragaa teessoo kee waliin dhiyeessu qabda.."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["ragaa seensaa baankii moobaayilaa jijjiiramuu danda'aa?"],
+    "responses": ["Lakki, ragaa seensaa baankii moobaayilaa jijjiiruun hin danda'amu. garuu lakkofsa icciitii jijjirrachuu danddeessu"]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["baankii moobaayilaa irraa maallaqa baasuuf filannoowwan akkamii filachuu qabaa?"],
+    "responses": ["Yeroo maallaqni baafamu baankii moobaayilaa keessatti, iskiriiniin gosa herrega kaffaltii itti raawwattu filannoo 3 ni agarsiisa: Sakatta’iinsa Qusannaa Liqii Maaloo filannoo liqii filadhu daldalli akka milkaa’uuf ykn yoo filannoo kun hin jirre sana booda filannoo sakatta'uu qofa filadhu."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["eenyummeessaa/ Password itti saagnuu?"],
+    "responses": ["moobaayilaa waliin ergaa ragaa seensaa irratti maxxanfama. Yeroo jalqabaaf baankii moobilaa Multicurrency keessaniif Password “internet Banking” keessan saaguuf Koodiin Activation / Iragaa seensaa barbaachisaadha. Yeroo jalqabaaf “internet Banking” User eenyummeessaa / Password fayyadamuun Activation Code / Iragaa seensaa fayyadamuun saaguuf tarkaanfiiwwan armaan gadii hordofamuu qabu: Weebsaayitii Baankii Awaash daawwachuun Prepaid “internet Banking” Filachuu Dirree User eenyummeessaa/baankii mobayilaa Number keessatti Lakkoofsa Kaardii fi Koodii Activation / Iragaa seensaa (kan keessatti caqafame) galchi kan ragaa seensaa ergaa) dirree Password jedhu keessatti. Galtee eenyummeessaa Fayyadamaa filannoo keetii kaayyoo seensaa gara fuula duraatiif Gaaffii dhoksaa menu tarree irraa filadhuutii deebii kenni Jecha icciitii haaraa kaasuun kanuma irra deebi'ii mirkaneessi Id Fayyadamaa fi Jecha icciitii haaraa kanaan sana booda herrega baankii moobilaa kee argachuuf seenuu dandeessa."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Kaffaltii Maallaqa baasuu Baankii Awaashn kaffaltii baankii moobaayilaa tiif kaffalu ol kaffaluun na barbaachisa?"],
+    "responses": ["Biyyoota murtaa’an keessatti kennitoonni Tajaajila baankii moobaayilaa maallaqa baasuuf baankii moobaayilaa seenuu isaaniif abbootii baankii moobilaa irraa kaffaltii dabalataa/mijannaa akka kaffalan hayyamameera. Kaffaltiin kun kaffaltii Baankii Awaash kaffalu caalaa dhaabbata tajaajila baankii moobaayilaa irraa kan kaffalamu yoo ta’u, kaffaltiin kun baankii irraa waan hin kaffalamneef baankii Baankii Awaash kaffaltii kana irratti to’annoo hin qabu.Kaffaltiin kun yeroo baay’ee maamilaaf yeroo kaffaltiia fi maamilchi kaffaltiin maamila biratti fudhatama kan hin qabne yoo ta’e yookaan kaffaltii sana itti fufuu yookaan addaan kutuuf filannoo qaba."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Yoo hafteen maallaqa kaffaltiif keessa jiru gahaa hin taane maaltu tahaa?"],
+    "responses": ["Kaardii kun boorsaa maallaqaa kamiyyuu maallaqa gahaa kaffaltii sana hayyamuuf yoo qabaate kaffaltii adeemsisuuf gahaadha. Boorsaan maallaqaa maallaqa kaffaltiia wajjin walsimu haftee gahaa yoo hin qabaanne kaffaltiin sun boorsaa maallaqaa haftee gahaa ta’e irraa deebisuudhaan raawwatama."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Bakka ani haftee baankii moobilaa koo fi seenaa baankii moobilaa koo ilaaluu danda'u?"],
+    "responses": ["Hafteen baankii moobilaa fi seenaa kaffaltii baankii moobilaa erga yeroon seenee booda www.hdfcbank.com irratti ilaaluun ni danda’ama ykn lakkoofsa bilbilaa fi/ykn teessoo E-mail baankii moobilaa keessan duuba tarreeffame irratti bilbiluun/barreessuudhaan wiirtuu tajaajila maamilaa irratti argachuun ni danda’ama."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Yoo baankii moobilaa koo bade ykn hatame eenyuun qunnamuu qabaa?"],
+    "responses": ["Battalumatti Baankii Awaash 8980 bilbiluun gabaasaa. Yeroo gabaasni kee baankii keessatti galmaa’e irraa eegalee Herrega Kaardii kee irratti (yoo jiraate) kaffaltii raawwatamuuf itti gaafatamummaa hin fudhattu. Akka filannootti gargaarsa."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Tajajilli  Maallaqa RTGS maalii?"],
+    "responses": ["'RTGS' jechuun 'Real Time Gross Settlement' jechuudha. Sirni RTGS mala dabarsuu maallaqaa yoo ta’u, jijjiirraan maallaqaa baankii tokko irraa gara baankii biraatti ‘yeroo dhugaa’ fi bu’uura ‘waliigalaa’ ta’een kan raawwatamudha. Kun sirna dabarsuu maallaqaa karaa baankii saffisaa ta’eedha. 'Yeroo dhugaa' jechuun yeroo eegaa hin qabu jechuudha; daldalli akkuma adeemsifameen ni xumurama. ' Qubsuma waliigalaa' jechuun daldalli sun ofuma isaatiin kan xumuramu yoo ta'u, daldala biraa kamiinuu osoo hin tuutamin. Dabalata ilaali."]
+  },
+  {"tag": "baankii moobayilaa",
+    "patterns": ["Tajaajila daddabrsa maallaqaa RTGS irratti kaffaltiin meeqadha?"],
+    "responses": ["Bara hojii 2022/2023 keessaa xiqqoo dabalee tue sababa Bankii biyyaalessa Itiyoophiyaa taarifoota murteesseen baankoonni immoo hojiirra oolchu."]
+  },
+ {"tag": "baankii moobayilaa",
+    "patterns": ["Maallaqni herrega tokko irraa gara herrega biraatti dabarfamuuf yeroo hangamii fudhataa?"],
+    "responses": ["Baankii mobilaan yoo tahe battaluma sana darba."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Yoo maallaqni sun milkaa’inaan hin galmoofne maamiltoonni erguu maallaqa sana ni deebifataa"],
+    "responses": ["RTGS waliin baankii fudhatu herrega fayyadamaa battalumatti galchuu qaba. Sababa tokkoon maallaqni sun galfamuu kan hin dandeenye yoo ta’e, baankiin fudhatu sa’aatii 1 keessatti maallaqa sana baankii erguuf deebisuu qaba. Akkuma maallaqni deebi’een galmeen deebii jalqabaa herrega maamilaa keessa jiru duubatti deebi’a."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Tajaajila dabarsuu maallaqaa RTGS yeroon fayyadamu odeeffannoo akkamii kennuu qabaa?"],
+    "responses": ["Yeroo Dabarsa Maallaqa RTGS fayyadamnu, ibsa barbaachisoo muraasni kennuu qabnu: Maallaqa ergamuu qabu Lakkoofsa herregaa bakka maallaqni itti kaffalamu Maqaa baankii fayyadamaa, fi maqaa maamila fayyadamaa Lakkoofsa herrega maamila fayyadamaa Ergeeraa fudhataa."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Daddabarsa maallaqaa RTGS irratti daangaa xiqqaan ykn guddaan jiraa?"],
+    "responses": ["Sirni RTGS daldala gatii guddaa qabuuf kan qophaa’edha. Nageenya mammiltoota eeguuf jecha hangi maallaqa karaa baankii mobayilaa daddarbu guyyaattii 2500 taheera. Maallaqni xiqqaan karaa RTGS ergamuu qabu qarshii 1000 ta’a. 2 Laakkii. Daldala RTGS tiif ol aanaa hin jiru. Jijjiiramni kana irratti mul'atu daldala RTGS karaa qofa yoo ta'u , yeroo maallaqni guddaan ID Maamilaa tokkoof guyyaatti dabarfamuu danda'u 25000."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Lakkofsa bilbilaa baankii mobaayilaa koo ittiin banadhe na jalaa badee jira maal gochuun qaba?"],
+    "responses": ["Maamila keenya Damee  irra Deemi Damee irratti   isaati  siif Sirreeffama."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["maallaqa herreega koo irraa gara baankii biraatti dabarseen ture hin qaqqabiin hafe maalin gochuu qaba?"],
+    "responses": ["rakkoon isin qunname galmaa’eera. saa’aatii 24 eegaa rakkoon kun isiinf furama."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["haftee herregaa kan bilbila koo irra jiru akkamittin beekuu dandahaa?"],
+    "responses": ["baankii mobaayila keessaan seenuun haftee herregaa kan jedhu tuqaa isaa boodaa gosa herregaa filaadhaa itti aansuun lakkofsa bilbilaa keessan tuqaa"]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Haftee herregaa amma ani qabu natti himuu dandeessaa?"],
+    "responses": ["Baankii moobayilaa fayyadamtu yoo taheef karaa sanaa ilaalachuu dandeessu. Yoo hin qabaannee damee baankii keenyaa isinitti dhihoo jiru dubbisaa."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Lakkofsa icciitii baankii mobaayilaakoo yoon dagadhe akkamiin sirreeffachuu dandahaa?"],
+    "responses": ["lakkofsa icciitii baankii moobayilaa irranfattani sirreeffachuuf damee keenya isin dhiyooo jirutti waraqaa eenyummaa keessan fudhadhaa deema isiniif sirrata."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Baankii moobayilaakoo fayyadamee lakkofsa icciitii baankii moobayilaa irraanfadhe haaromfachuu nan dandahaa?"],
+    "responses": ["eeyyeen fuula jalqabarratti argaattuu akkaataa hojimaata inni isin gaafateen deebisaa odeefannoo guutaa deemaa isiin haromfama."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Ergaa gabaabaa lakkofsa bilbilakoorra lakkofsi iccitii kanaan dura ergame ture amma fayyadamuun dandahaa?"],
+    "responses": ["turtii saa’aatii 24 booda hojiin ala taasifama. kaanaafuu akka haaraatti gaafaadha."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Baankii moobayilaan fayyaadamee yeroo qilleensaa guuttachuuf yaaleen ture garuu si’a lama na jalaa darbee maali gochuun qabaa?"],
+    "responses": ["rakkoon akkasii ni mudata rakkoo networkii waan taheef maallaqa kana gara herrega keessanitti isiinif deebissuun ni uulfata."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Ani herrega baankii keessanii hin qabu garuu ergaan gabaaba na qaqqabu maqaa nama biraatinidha. namni kun baankii moobayilaa fayyadamuun yakkoota raawaachuu dandahaa?"],
+    "responses": ["rakkoon kun kan tahu maammilli haaraan galmaa’u bakka lakkofsa bilbila gutanitti dogoongoraan bilbila keessan guutan. ni sirreeffama. Garuu baankii mobayilaa namni biraan fayyadamuu hin dandahu. sababni isaa yeroo baankiin moobayilaa galmmeeffamu ergaa gabaabaan lakkofsa keessanirratti ergama ergaa sana argachuu hin dandahu."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Ani herrega baankii keessanii hin qabu garuu ergaan gabaaba na qaqqabu maqaa nama biraatinidha. namni kun baankii moobayilaa fayyadamuun yakkoota raawaachuu nama biraatti raawwachuu nan dandahaa?"],
+    "responses": ["rakkoon kun kan tahu maammilli haaraan galmaa’u bakka lakkofsa bilbila gutanitti dogoongoraan bilbila keessan guutan. ni sirreeffama. Garuu baankii mobayilaan heerega nama  biraa sochoosuun yakka suuraa, mallattoo fi waraqaan eenyummaa ni ilaalama."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["herrega koo irraa dogongoraan herrega nama biraatti dabarse maal gochuun qabaa?"],
+    "responses": ["Damee isinitti dhihoo jiru deemaa odeeffannoo kana keennaa, yoo namni herrega isaatti gale eeyyamame isiiniif deebbiha, baankiin kana deebissuuf aangoo hin qabu eeyyama nama sana barbaachisa."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Baankii moobayilaan baankii biraa irraa maallaqni naaf ergamee isa biraa waraaqaan milkaanneessu jira hereega koo irra garuu hin geenye maaliifidhaa?"],
+    "responses": ["baankii jalqaba irraa isiininf dabasuuf yaalame qunnama isiiniif sirrata."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["yeroo qilleensaa guuttachuuf barbaaden ture."],
+    "responses": ["baankii moobayilaa mossajii moo *901# fayyadamtu? lamaan isaarrayyuu filaannoon yeroo qillensaa jedhu jira. sana booda Itiyoo telekoom ykn safaarii filaadhaa. isaa booda hamma guuttatan galchaa dhumarratti erguu kan jedhu tuqaa."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["maallaqa kaardii malee jedhu hojjamaatasaa natti himuu dandeessaa?"],
+    "responses": ["taajaajila kaardii maleen maallaqa baasuf fillannoo maallaqa erguu jedhu jalaa  mallaqa erguu kan jedhuun xuqaa isaan boodammoo lakkofsa bilbila keessan guuta. hanga maallaqa baasuu barbaaddan galchuun tumuraa. ergaan gababaa si’a lama lakkofsaa icciitii kan duraa fi kan dhumaa jedhee ergamu jira. lakkofsa sana atm irratti filannoo kaardii malee jedhu tuqaaa. isaa booda lakkofsa bilbila galchaa itti fufun immooo  lakkofsa iccitti lamatti qoodame dhufe duuraa duubaan guutaa itti aansuun hamma maallaqaa barbaaddan galchaadhaa dhumarratti filannoo baasuu jedhu tuqaaa."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["baankii moobayilaan kaaffaltii humna ibsaa kaffaluu danda’aa?"],
+    "responses": ["dhihoo kana walii galtee godhameen humni ibsaa itiyoopjiyaa kaffaltii baankii mobayilaan jalqabeera. Bankii moobayilaa keessan erga seentaniin booda kaffalti humna ibsaa itiyoophiyaaf kan jedhu tuqaa isaa booda koodii maammila  taajaajila humna ibsaarra isiniif  kenname guutaa isaan booda maqaa abbaa herregaa fi hamma maallaqa isiinif muldhisa herrega irraa kaffalamu filachuun ergaa. dhumarratti na gaheen isinnif dhufa."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["gara baankii biraatti yeroon dabasuuf jedhu herrega namicha ergaan galchee booda maaqaa deebisee natti muldhisa rakkoon kun  maalidha? akkamiin siirreeffacdhaa?"],
+    "responses": ["Rakkoon akkasii mudatee hin beeku tarii bakki heereega galchitan sana sirriiitti kan nama ergamuuf sana tahuu milkanneessa rakkoon jiraatu ni sirreeffama."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Dogongoree si’a muraasa lakkofsa icciitiikoo yaalee jennan baankiin moobiyilakoo dhorkameera naan jedhe maal gochuun qaba?"],
+    "responses": ["Si’a sadii erga yaaltanii booda bankiin moobayila dafee dhorka kaa’a kunis qaamaa damee deemtanii malee hin nsirreeffamu. Yeroo deemtan waraqaa eenyummaa fi mallattoo keessan ilaalamee siniif sirreeeffama."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["guyyaa kaleessaa jalqabee mossajjin baankii moobayilaa naaf hojjachaa hin jiru maal gochuun qaba?"],
+    "responses": ["isa jiru balleeessaa geessituu biraan buufadhaa ykn immo haaromsuu kan jedhu kuusaa mossajjii keessa seenuun haaromsadhaa isiniif dalaga."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["taajila baankii moobayilaa is ahaaraa eessan argachuu dandahaa?"],
+    "responses": ["kuusaa mosaajjii googilii irraa argachuu dandeessu buufadhaa itti fayyadamaa."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Waaleetii Moobaayilaa Awaash maalidhaa?"],
+    "responses": ["Waaleetiin Moobaayilaa Awaash, tajaajila baankii moobaayilaa Baankii Awaashiin kennamudha. Innis fayyadamuuf salphaafi mijataa kan ta’edha. Namni bilbila harkaa kamiyyuu qabate qunnamtii intarneetaa malee bakka neetwoorkiin bilbilaa jirutti tajaajila argachuu ni danda’a. Akkasumas tajaajila waan argataniif opireetera telekoom irraa kaffaltii hin gaafatamtani"]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Akkamiin waaleetii moobaayilaa Awaash galmaa’uufi bilbila harkaa fayyadamuun herreega sochoosuu dandeenya?"],
+    "responses": ["Damee Baankii Awaash bakka  Baankii Awaash Akkaawuntii moobilaa baankii keessanitti damee Baankii Awaash ykn Bakka bu’aa kamittuu galchuu ni dandeessu.Akkaawuntii mobaayilaa baankii keessan keessatti hanga ETB 25,000.00 qusachuu dandeessuMaallaqa moobilaa baankii keessan keessaa hanga qarshii 6,000.00tti guyyaa tokkotti ykn sa’aatii 24 keessatti karaa, ATM ykn damee baankii awaash irraa baasuu dandeessu."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Akkaataa Tajaajila waaleetii moobaayilaa Awaash Argachuu Dandeenyuu odeeffannoo nuuf kennaa"],
+    "responses": ["Karaa USSD fayyadamuun akkaawuntii keessan hojjechisuun baayyee salphaadha. Step ykn tarkaanfiiwwan armaan gaditti gabaabinaan tarreeffamaniiru...Tajaajila argachuuf  *832# bilbili PIN keessan sirritti galchaa Lakkoofsa tajaajiloota dirree keessaa wajjin walsimu galchuudhaan tajaajila filadhu.Tajaajila biraatti osoo hin deemin dura tajaajila tokko xumuruu qabda.Yeroo murtaa'e keessatti PIN keessan jijjiiruun gaariidha.PIN kee yoo dagatte damee sitti dhihaatutti iyyachuu qabda, PIN haaraa battalumatti argachuu dandeessu."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Tajaajiloota baankii moobayilaa irra jiran natti himuu danddeessaa?"],
+    "responses": ["Gaaffii haftee herreega Herreega BaankiiHerreega Waaleetii, baay’ina herreega walitti hidhame irratti hundaa’uun.Biilii Mobaayilaa Gaaffii Jijjiirraa sharafa alaa,Sadarkaa Bittaa,Sadarkaa Gurgurtaa,Maallaqaa dabarsuu,Maallaqa baasuu,Maallaqa Erguu,Kaffaltiiwwaan raawwachu,Tajaajila Biroo,Ibsa Xiqqaa,Ibsa Guutuu,Lakkoofsa Icitii/PIN jijjiiruu,Qooqa/Afaan jijjiiruu."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Akkataa kamiin Wallet Awaash keessa seenuun dandahamaa? "],
+    "responses": ["Galmeen erga xumuramee booda ergaa gabaabaan karra ergaa gabaabaa Baankii Awaash irraa maamilaaf ergamuun galmee mirkaneessaa fi PIN jalqabaa (Lakkoofsa Eenyummaa Dhuunfaa) dijiitii afur of keessaa qabu isinif ergama.Jalqabuuf *832# bilbili Itti fufuuf PIN dijiitii 4 kee dirree keessatti galchi:Systemichi PIN jalqabaa kee haaraadhaan akka jijjiirtu si dirqisiisa, achiis PIN haaraa yaadachuu dandeessu galchi garuu lakkoofsi walfakkaataan kan akka 2222 hin hayyamamu. Mirkaneessuuf PIN haaraa keessan yeroo lama galchuu qabdu.Keessan erga jijjiirtanii booda PIN haaraa kanaan seenuu qabdu."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Waaleetiin Moobaayilaa Awaash maalidha?"],
+    "responses": ["Waaleetiin Moobaayilaa Awaash, tajaajila Baankii Moobaayilaa Baankii Awaashiin kennamudha. Fayyadamuufis salphaafi mijataa kan ta’edha.Faayidaafi amaloota isaa,Haftee herreegaa,Kaardii Moobaayilaa,Sharafa Alaa,Maallaqa Dabarsuu,Maallaqa Baasuu,Maallaqa Erguu,Kaffaltiiwwan,Tajaajilawwan Biroo."]
+ },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Baankiin moobayilaa naaf dalagu dide maal gochuun qaba? "],
+    "responses": ["mossaajji kan faayyadamtan yoo tahe haromsaafadhaa, yoo *901# fayyadamtu tahemmoo irra deebihaa yaalaa."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Baankiin moobayila maalidhaa?"],
+    "responses": ["Tajaajilli Baankii Moobaayilaa maamiltoonni meeshaa moobaayilaa bakka kamittuu, yeroo kamiyyuu fi meeshaa sochootuu kamiinuu fayyadamuun daldala faayinaansii akka gaggeessan ni taasisa. Tajaajila baankii moobaayilaa keenya fayyadamuuf hunda bilbila ismaartii keessan irratti nageenya, daangaa malee argachuu dandeessu."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Fayidaan baankii mobayilaa maali?"],
+    "responses": ["Tajaajilli baankii moobaayilaa kompiitara ykn meeshaa moobaayilaa keessan irraa herrega keessan argachuu fi bulchuun salphaa fi mijataa taasisa. Hafteen keessan ilaaluu, herrega kaffaluu, ykn maallaqa dabarsuu yoo barbaaddan,tajaajilli baankii dijitaalaa keenya bakka wal qunnamtan hundatti faayinaansii keessan hordofuu fi bulchuuf isin gargaara."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Baankiin moobayilaa kan damee caalaa mijaataa?"],
+    "responses": ["baayyee mijataadha fakkeenyaaf kaffaltii kaffaluu, wayaa erguu fi bakka kamirraayyuu akkaawuntii keessan to’achuu, 24/7."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Fooyya’iinsa Imaammataa fi Guyyaa Hojiirra Oolmaa baankii moobaayilaa maaliidhaa?"],
+    "responses": ["Imaammanni isaa jijjiiramuu kan danda’u yoo ta’u, jijjiiramni Imaammata kana irratti taasifamu kamiyyuu yoom hojiirra oola application kana irratti maxxanfame. Jijjiirama kana hordofuun application fayyadamuu kee fudhatta jechuudhaImaammata fooyya’e."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Hordoffii Bakka itti maammilli itti argamu jiraa baankii mobayilaa waliin wal qabatee?"],
+    "responses": ["Yeroo gaafattan bakka jirtan ilaalchisee odeeffannoon murtaa’aan baankiif darbuu danda’a odeeffannoo karaa mosajjii meeshaa moobaayilaa keessan irratti argaman, kan akka bakka qabatamaan jirtu yeroo mosajji sana fayyadamtu argachuudhaan. Daataan bakka, meeshaa moobaayilii keessan irraa walitti qabnu salphisuuf nu gargaara sarbama seeraa ykn odeeffannoo maamiltootaa hayyama malee argachuu danda’u kamiyyuu irratti deeggarsa kenna."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Tajaajila Baankii Moobaayilaa kennu maal maal?"],
+    "responses": ["Mijannaa keessaniif, dandeettii oomishaalee fi tajaajiloota keenya tokko tokko karaa aplikeeshinii baankii moobaayilaa argachuu dandeessan isiniif dhiyeessa. Yeroo karaa Mobile Banking App. nu waliin wal qunnamtan, odeeffannoo akka adda baastoota meeshaa addaa keessaniif walitti qabuu dandeenya meeshaa moobaayilaa, furmaata iskiriinii keessanii fi qindaa’inoota meeshaa biroo, odeeffannoo waa’ee bakka jirtan fi odeeffannoo xiinxala akkaataa itti fayyadama meeshaa moobaayilii keessanii."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Waliigaltee Imaammataa baankii moobayilaa maal fakkataa?"],
+    "responses": ["Mosajjii Baankii Moobaayilaa buufachuudhaan. meeshaa moobaayilii keessan irratti, kanaaf hayyama kennitu Imaammata kan odeeffannoo waa’ee kee haala kanaan ibsuu fi itti fayyadamuuf hayyama kee of keessatti hammate Imaammata kana keessatti bal’inaan ibsameera."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Addunyaa kanarraa bakka kamirraayyuu akkaawuntii(wwan) salphaatti baankii moobayilaan  argachuu nan dandahaa?"],
+    "responses": ["Addunyaa kanarraa bakka kamirraayyuu akkaawuntii(wwan) keessan salphaatti argachuu dandeessu. Dhaabbata hordoffii herregaa yeroo qabatamaa toora interneetii, Mijannaa daldala baankii gaggeessuu irra mijataa manaa/waajjira, Daldala toora interneetii keessanii hundaaf nageenya wabii qabu, Odeeffannoo fi oomisha baankii Salphaatti Argachuu,Karaa bu’a qabeessa, gatii salphaa fi salphaa maamiltoonni keenyaaf baankota waliin walqunnamsiisuu,24/7 akkaawuntii akka seenan ni hayyama."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Baankii Bakka Kamittuu yeroo kamiyyuu yeroo jedhamu maal muldhisaa?"],
+    "responses": ["Baankiin waliin, daran sitti dhihaatee akkaawuntii keessanitti dhihaata. sirna baankii nageenya qabuu fi nageenya qabu kan caasaa hunda caalaa jijjiiramaa ta’e kan dhiyeessu yoo ta’u, bakka kamirraayyuu fi bakka hundarraa akkaawuntii keessan akka argattan isin dandeessisa."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["bu’aawwani (omishoonni) baankii moobayilaa maal fa’i?"],
+    "responses": ["Yeroo Qilleensaa Moobaayilaa Yeroo qillensaa Kaffaltii kaffaltii mana barumsaa Kaffaltii Tikeetii Xiyyaaraa Guzogo Tikeetii Daandii Xiyyaaraa Itoophiyaa kaffalaa Maallaqa gara herrega ofii fi gara herrega birootti dabarsuu,Maallaqni gara herrega baankii birootti dabarsuu,Jijjiirraa gara telebirr, Kaffaltii Labsii Ethio-telecom, Kaffaltii Intarneetii Websprix kaffalu, Ibsa kee bal'inaan ilaali,Fayyadamaa kee kaffaltii fi bulchuu,sadarkaa jijjiirraa guyyaa guyyaa ilaalaa,Jijjiirraa Maallaqa Biyya Keessaa,Tartiiba dhaabbataa,Herrega liqii fi sagantaa kaffaltii keessanii ilaalaa fi Damee/ATM barbaaduu"]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Kaffaltiin Karaa USSD maalidha?"],
+    "responses": ["Akka teeknooloojii qunnamtii hundarra gaarii ta’ee fi tajaajila faayinaansii moobaayilaa qunnamtii interneetii malee kennuudhaaf, USSD bakka kamitti iyyuu akkaawuntii keessan argachuuf carraa ni kenna.  Maallaqa gara herrega ofii fi gara herrega birootti dabarsuu Hafteen kee ilaali Ibsa gabaabaa ilaali Sadarkaa jijjiirraa guyyaa guyyaa ilaalaa."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Jechi Darbii Yeroo Tokko (OTP) maalidha?"],
+    "responses": ["Jechi Darbii Yeroo Tokko (OTP) koodii nageenyaa dijiitii 6 qabuu fi daldala tokkoof hojiirra ooludha. Lakkoofsa mobaayilaa galmaa'e irratti ergama. Yeroo meeshaa haaraa fayyadamtan hunda OTP isin barbaachisa. Akkasumas daldala kee mirkaneessuu fi xumuruuf OTP galchuun si irraa eegama.."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Maamilli tokko tajaajila baankii mobaayilaa fi interneetii yeroo tokkotti fayyadamuu danda’aa?"],
+    "responses": ["Eeyyee, Yoo ID maamila dhuunfaa ID maamila herrega dhaabbataa irraa adda ta’e kan mandate set up irratti fayyadamu.."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Nagahee daldalaa akkamitti argachuu dandeenya? Daldalli karaa Baankii Intarneetii maaliif hayyamaan hin darbine?"],
+    "responses": ["Wabii daldalaa fayyadamuun irra deebi’amee maxxansuu deal slip irratti argamuu danda’a.Hayyamaan ID fayyadamaa kan yeroon isaa darbe qaba. Odeeffannoo dabalataaf damee qunnamaa."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Yeroo seensaa dogongorri mirkaneessuu fi mirkaneessaa maaliif mudata?"],
+    "responses": ["Kun kan ta'e yookaan mirkaneessi mirkaneessuu gaafatame dogoggora yookaan sirrii miti. Kanaaf,ID fayyadamaa, jecha icciitii fi OTP galchuun sirritti, OTP maddisiisuuf piini sirrii galchi, Fayyadamaan jalqaba irratti tajaajila keenyaaf jiraachuu/mallatteessuu isaa mirkaneessuu, Guyyaan xumura fayyadamaa yeroon isaa akka hin xumuramne mirkaneessi.."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Akkamittan argachuu danda'a, Yoon jecha icciitii ykn deebii nageenyaa dagadhe?"],
+    "responses": ["ofii keessaniitiin Reset gochuu dandeessu ykn damee dhiyoo jiru qunnamuu."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Erga seentee milkaa'ee booda heerreegni maaliif hin mul'atu?"],
+    "responses": ["Herrega dirree sirrii irratti galfamuu fi dhiisuu isaa gaafachuu/Ilaaluu, Menuun fayyadamaa baankii interneetii kennamuu fi dhiisuu isaa gaafachuu /Ilaaluu."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Qabiyyeen fuulaa sirnaan Qajeelfama hin jiru jedhu maal gochuu danda'a?"],
+    "responses": ["cookies irra deebi'anii banuuf yaali,Fuula sana ammas haaromsi."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Garaagarummaan baankii onlaayinii fi baankii moobaayilaa gidduu jiru maali?"],
+    "responses": ["Gama dalagaatiin, dhuguma garaagarummaan lamaan gidduu jiru hin jiru. mosajjii mobaayilaa irratti, wantoota akka herrega kee ilaaluu, maallaqa dabarsuu fi kaffaltii kaffaluu ni dandeessa akkuma yoo kompiitara deeskitooppii irraa akkaawuntii kee seentu gootu. Dhugaadha, yoo baankii keessan waliin mosajjii hin qabdan ta’e, bilbila keessaniin gara marsariitii baankii sanaa deemtanii akkaawuntii keessan seenuufis filannoo qabaachuun keessan hin oolu. Akkasumas, baankonni tokko tokkos tajaajila murtaa’e karaa barreeffamaatiin ni kennu."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Baankii moobaayilaa maaliif fayyadamna?"],
+    "responses": ["Namoonni baay’een baankii moobaayilaa mijannaa inni dhiyeessuu irraa kan ka’e fayyadamuu filatu. Hiriyyoota kee waliin baatee akka tasaa liqii barattootaa hanga ammaatti akka hin kaffalle fi boru akka kaffalamu yaadatta jedhi. Gara manaatti ariifattee kaffaltii kompiitara kee irratti raawwachuu si hin barbaachisu kaffaltii nageenya qabu kaffaltii kaffaltii moobaayilaatiin sirriitti mosajjii baankii keetii irratti raawwachuu dandeessa. Ammallee baankii keessan daawwachuuf simannaa guddaa ta’us, baankii moobaayilaa yeroo itti aanutti ergaa fiigdan tarree dhaabbii keessan hir’isuu danda’a. Fakkeenyaaf, kana booda baankii ykn ATM daawwachuudhaan cheekiin qaamaan galchuun si hin barbaachisu. Baankii moobaayilaatiin, kuufama moobaayilaa fayyadamuu dandeessu, kunis bilbila keessan fayyadamuun, bakka jirtan hundattu akka tajajilamtan  isin dandeessisa."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Karaa baankii moobayilaa kaffaltiwwan biilii raawwachuu argachuu nan danda’aa?"],
+    "responses": ["Eeyyee, baankii moobayilaan kaffaltii kaffaluu, kaffaltii raawwatame ilaaluu ykn kaffaltii haquu dandeessu. Fayyadamuu dura tajaajila Bill Pay keessatti galmaa’uu fi karaa vbaankii mobayilaa kaffaltii kaffaltoota haaraa uumuu qabda."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Sarara Liqii koo Baankii Moobaayilaa irraa argachuu nan danda’aa?"],
+    "responses": ["Mijannaa keessaniif Sarara Liqii dhuunfaa irra caalaan isaanii karaa Baankii Moobaayilaa argachuu dandeessu. Haa ta'u malee mirgi ilaalchaa fi jijjiirraa keessan karaa Online Banking diriiruu qaba."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Mobile Banking 24/7 maallaqa dabarsuu danda'aa?"],
+    "responses": ["Eeyeen yeroo fi bakka kamittu maallaqa keessan dabarsuu dandeessu."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Ergaa barreeffamaa ykn karoora daataa na barbaachisa?"],
+    "responses": ["Eeyyee, ergaa barreeffamaa fi ykn karoorri deetaa akkaataa idileetti barbaachisaadha, sababiin isaas itti fayyadamni deetaa isaan malee qaala’aa ta’uu danda’a. Odeeffannoo dabalataaf wireless carrier keessan irraa ilaalaa."]
+  },
+  {"tag": "baankii moobayilaa",
+    "patterns": ["Dhimma baankii moobilaa ykn kaffaltiia wajjin walqabatu kamiifuu eessa qunnamuu danda’aa?"],
+    "responses": ["Lakkoofsa wiirtuu tajaajila maamiltootaa 8980 bilbilaa."]
+  },
+ {"tag": "baankii moobayilaa",
+    "patterns": ["Akkamitti Mobile Banking browser bilbila koo irratti argachuu danda’a?"],
+    "responses": ["Mobile Web Browser yeroo barbaaddanitti midiyaalee baankii daawwachuu dandeessu."]
+  },
+ {"tag": "baankii moobayilaa",
+    "patterns": ["Baankii mobayilaa kuufama maallaqaa fayyadamuuf ulaagaa guutuu qabaachuu koo akkamittan beeka?"],
+    "responses": ["Amala kana fayyadamuuf herrega kuufama ulaagaa guutuu qabu, kan akka herrega cheekiin dhuunfaa qabaachuu qabda. Guyyoota 30 jalqabaa keessatti Carraa 100 fi herrega haaraa kamiyyuu Kuufama Moobaayilaa argachuuf ulaagaa hin guutu. Maamiltoonni sakatta’an biroo hayyama argachuu qabu. Yoo ulaagaa guutuu hin dandeenye, Kunuunsa Maamiltootaa qunnamuu dandeessa."]
+  },
+ {"tag": "baankii moobayilaa",
+    "patterns": ["Akkamitti Mobile Banking galmaa'uu danda'a?"],
+    "responses": ["Kompitara keessan irratti Online Banking seenuun filannoo Mobile Banking jedhu filadhaa. Mobaayila keessan galmeessuun qajeelfama kenname hordofaa. Yoo gaaffii qormaataa baankii onlaayinii fayyadamtan, kallattiin bilbila harkaa keessan irraa linkii weeb mobaayilaa seenuun baankii moobaayilaa galmaa'uu dandeessu."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Akkamitti Mobile Banking browser bilbila koo irratti argachuu danda’a?"],
+    "responses": ["Mobile Web Browser yeroo barbaaddanitti midiyaalee baankii daawwachuu dandeessu."]
+  },
+
+{"tag": "baankii moobayilaa",
+    "patterns": ["Kaffaltii baankii moobayilaa keessa jiru haquu ykn fooyyessuu nan danda'aa?"],
+    "responses": ["Kaffaltiin erga ergamee booda haqamuu ykn fooyya’uu hin danda’u"]
+  },
+
+{"tag": "baankii moobayilaa",
+    "patterns": ["Haftee fi odeeffannoon mosajjii kana irratti argamu 24/7 sirrii ta'aa? Akkasumas hafteen koo maallaqa herrega keessa jira jedhu maaliif maallaqa baasuu hin danda'u?"],
+    "responses": ["Mosajjiichi 24/7 fayyadamuu kan danda'u yoo ta'u, odeeffannoon herregaa yeroo yeroon kan eegamu ta'a. Yeroon garaagarummaan hafteen herrega keessanii fi hafteen jiru gidduu jiru ni jiraata. Kunis sababa, fakkeenyaaf, kaffaltiin kaardii deebii sababa herrega keessaa ba’uu irraa kan ka’e ykn cheekiin herrega sanatti kaffalamee ammallee hin qulqullaa’in irraa kan ka’e ta’uu danda’a."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Yoon bilbila, SIM card, network ykn tablet jijjiire hoo? Akkasumas yoo app sana uninstall godhe maaltu ta'a?"],
+    "responses": ["Mosajjiichi meeshaa keessan irratti waan kuufamuuf yoo SIM card ykn network keessan jijjiirame dhiibbaa hin qabu. Yoo meeshaa keessan jijjiirtan ta'e app sana irraa haqaatii meeshaa haaraa keessan irratti deebi'aa install godhaa. Kunis akkaawuntii keessan, ibsa seensaa keessanii ykn jecha icciitii keessan irratti dhiibbaa hin geessisu. Isaanis akkuma duraaniitti ni hafu."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Yoon meeshaa moobaayilaa koo share godhe namni biraa mosajjiicha fayyadamee gara account isaa seenuu danda'aa?"],
+    "responses": ["Mosajjiicha qooduun ohin gorsinu, namni biraa maqaa fayyadamaa isaa fi jecha icciitii mataa isaa ykn Secure Key fayyadame yoo ta'e sana booda karaa mosajjii kanaa seenee ibsa herrega isaanii argachuu danda'a ture."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Mosajjiin baankii mobayilaa yoo bahuu dagate hojjechuu itti fufaa moo yeroon isaa ni dhumata?"],
+    "responses": ["Kutaan baankii moobaayilaa keessan daqiiqaa 5 sochii malee booda ofumaan ni xumurama."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Mobaayilli ykn taableetiin koo yoo bade ykn hatame maal gochuu qaba?"],
+    "responses": ["Karaa mosajjii baankii mobaayilaatiin herrega keessan argachuuf ibsi galmee keessanii barbaachisaadha. Kanaafuu hanga kunniin balaadhaaf hin saaxilamnetti akkaawuntiin keessan nageenya qaba. Mosajjiichi odeeffannoo herregaa kamiyyuu bilbila/taableetii keessan irratti hin kuusu. Yoo ibsi galmee keessanii balaadhaaf saaxilamuu danda'a jettanii yaaddoo qabaattan, nu qunnamaa nu beeksisaa. Weebsaayitiin Get Safe Online akkaataa bilbila harkaa fi taableetota itti eegan irratti qajeelfama dabalataa kenna."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Mosajjiin baankii mobayilaa yoo bahuu dagate hojjechuu itti fufaa moo yeroon isaa ni dhumata?"],
+    "responses": ["Kutaan baankii moobaayilaa keessan daqiiqaa 5 sochii malee booda ofumaan ni xumurama."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Mobaayilli ykn taableetiin koo yoo bade ykn hatame maal gochuu qaba?"],
+    "responses": ["Karaa mosajjii baankii mobaayilaatiin herrega keessan argachuuf ibsi galmee keessanii barbaachisaadha. Kanaafuu hanga kunniin balaadhaaf hin saaxilamnetti akkaawuntiin keessan nageenya qaba. Mosajjiichi odeeffannoo herregaa kamiyyuu bilbila/taableetii keessan irratti hin kuusu. Yoo ibsi galmee keessanii balaadhaaf saaxilamuu danda'a jettanii yaaddoo qabaattan, nu qunnamaa nu beeksisaa. Weebsaayitiin Get Safe Online akkaataa bilbila harkaa fi taableetota itti eegan irratti qajeelfama dabalataa kenna."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Akkamitti Online Banking keessaa ba'uu danda'a?"],
+    "responses": ["Qabduun ‘Logout’ jedhu Onlaayinii Banking keessaa fuula kamiyyuu gubbaa menu bar keessatti argamuu danda’a."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Akkamitti jecha icciitii Baankii Toora Interneetii jijjiiruu danda'a?"],
+    "responses": ["Baankii mobayilaa keessatti jecha icciitii keessan jijjiiruu kan dandeessan menu bar keessaa ‘Profile’ jedhutti seenuun ‘Change Password’ filachuudhaani."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Seenaa daldala koo Baankii Toora Interneetii irraa akkamitti maxxansuu ykn buufachuu danda’a?"],
+    "responses": ["Fuula Bal'ina Herregaa keessaa, fuula guutuu maxxansuuf mallattoo Maxxansaa barruu mataduree Bal'ina Herregaa keessaa filachuu dandeessa. Yoo seenaa daldala keessanii fuula guutuu osoo hin maxxansin buufachuu barbaaddan, fuula Bal’ina Herregaa irraa ‘irra caalaa...’ sana booda ‘Bufachuu’ filachuu dandeessu. Erga bifa faayilii fi hamma guyyaa daldala buufachuu barbaaddan filattanii booda ‘kuusuu’ cuqaasuun faayilii haaraan akka ilaaltan/buufattan isiniif qophaa’a."]
+  },
+
+{"tag": "baankii moobayilaa",
+    "patterns": ["Garaagarummaan Haftee koo Ammaa fi Haftee koo Argamu gidduu jiru maali?"],
+    "responses": ["Eeyyee, tajaajilli baankii moobaayilaa muuxannoowwan gaarii baankii toora interneetii irraa argaman fayyadama, kanneen akka HTTPS, 128-bit SSL encryption, ykn yeroo bilbilli keessan itti hin fayyadamnetti password argachuu fi yeroon application yeroon xumuramu. Bilbiloota dhuunfaan tajaajila kana keessatti galmaa'an qofatu akkaawuntii keessan argachuu danda'a. Kana malees, daataa herregaa kamiyyuu bilbila keessan irratti kuufamee hin beeku. Yoo bilbilli keessan bade ykn hatame, tajaajilichi battalumatti hojii irraa oolchuu kan danda’u yookaan toora interneetii irratti gara marsariitii galmee Baankii Moobaayilaa deemuun yookaan Giddugala Kunuunsa Maamiltootaa keenyaa 8980 bilbiluun."]
+  },
+{"tag": "baankii moobayilaa",
+    "patterns": ["Mobile Banking browser bilbila koo irratti activate godheera. Maaliif ammas akkan activate godhu na gaafatamaa?"],
+    "responses": ["Yeroo activate goonu cookie browser bilbila keessanii irratti kan kuufamu yoo ta'u kunis sirni Mobile Banking akka activate gootan akka yaadatu taasisa. Kukiin kun sirna Baankii Moobaayilaa qofaan kan mul’atu yoo ta’u, odeeffannoo dhuunfaa hin qabu. Bilbiloonni tokko tokko kukii dandeessisuuf ykn yeroo yeroon haquu si gaafachuu danda'u, kunis deebi'anii hojiitti galchuu barbaachisa. Yoo rakkoon kun isin mudate, kukiiwwan dandeessisuun isaanii mirkaneessuuf qindaa'ina bilbila keessanii ilaalaa. Yoo kukiiwwan dandeessifamanii fi dhimmichi itti fufe, maaloo odeeffannoo deeggarsa kukii bilbila harkaa keessan irratti argachuuf dhaabbata neetworkii moobaayilaa keessan qunnamaa."]
+  },
+
+
+
+{"tag": "baankii moobayilaa",
+    "patterns": ["Daddabarsa maallaqaa baankii moobayilaan walqabatu hundaaf mirkaneessuun Sadarkaa 2ffaa maaliif dirqama ta’a"],
+    "responses": ["Baankin Awash tajaajilli baankii mobayilaa hundi yeroo daldalli raawwatamu mirkaneessa sadarkaa lammaffaa qabaachuu qaba. Akka kanaan yeroo marsariitiiwwan kaniraattiyyuu kaffaltii baankii mobayilaan raawwattan  mirkaneessuun Sadarkaa 2ffaa erga egalchistanii booda ibsa barbaachisu guutuu fi kaffaltii xumuruu dandeessu. Akkasumas baankii moobilaa keessan  milkaneessa sadarkaa 2ffaa hojjachisaa jedhu egumsa keessanif akka isiin fayyadu hubachuu dandeessu."]
+  },
+  {"tag": "baankii moobayilaa",
+    "patterns": ["Yoo ragaa seensaa baankii mobayilaa koo cufame hojimaanni hordofuu qabu maalii?"],
+    "responses": ["Hubadhaa, baankii moobaayilaa keessatti yeroo sadii ragaa seensaa sirrii hin taane yoo galchitan sababa nageenyaatiin qaqqabummaan keessan ni cufama. Sa'aatii 24 booda garuu ni socho'a. Baankii moobaayilaa keessan sa'aatii 24 booda baankii moobaayilaa irratti ragaa seensaa wal fakkaatu isin bira jiruun fayyadamaa. Yoo ammallee akkaawuntii keessan hin dhaqqabne ta'e, maaloo ragaa seensaa haaraa argachuuf iyyadhaa. ragaa seensaa baankii moobaayilaa keessan haaromsuuf iyyachuu kan dandeessan karaa armaan gadiitiin: Unka iyyannoo ragaa seensaa haaraa guutaatii damee keenya kamittuu galchaa. Unkaan nu qaqqabuu fi mirkaneessi milkaa’aa ta’e, ragaa seensaa baankii moobaayilaa haaraa adeemsifnee gara lakkofsa bilbila keessaniitti ni ergina, akkuma galmee keenya keessatti galmaa’etti."]
+  }
+]
 }
